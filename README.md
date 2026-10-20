@@ -172,8 +172,7 @@ runs just mutations 3 and 7). Takes roughly 15 to 20 minutes. Run one instance o
 - `tryLock` with a timeout turns a deadlock into a failure the caller must handle; it does not add jittered backoff, so
   two callers retrying in lockstep could livelock. `retry` has no jitter either.
 - Only tested on JDK 17 locally (OpenJDK 17.0.20, Windows). The workflow also lists JDK 21.
-- CI: the workflow (`.github/workflows/ci.yml`, JDK 17 and 21 matrix, `mvn -q -B verify` plus the demo) is included, but CI
-  has not been confirmed from this directory (check the Actions tab).
+- CI: the workflow (`.github/workflows/ci.yml`, JDK 17 and 21 matrix, `mvn -q -B verify` plus the demo) is included. CI ran green on the first run on GitHub Actions (Java 17 and 21, ubuntu-latest, 2026-10-20).
 
 ## Layout
 
